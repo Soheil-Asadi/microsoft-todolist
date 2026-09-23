@@ -1,0 +1,32 @@
+@keyframes slideSequence {
+  0% {
+    transform: translateX(100px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide {
+  animation: slideSequence 450ms ease-out;
+}
+
+@keyframes addTodo {
+  0% {
+    transform: translatey(-20px);
+  }
+  50% {
+    transform: translatey(10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.todoSlide{
+  animation: addTodo 300ms ease-out;
+}

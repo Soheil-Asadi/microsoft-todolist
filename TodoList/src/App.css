@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* *{overflow-x: ;
+height:full
+ ;
+ scrollbar-gutter:stabl;
+} */

@@ -4,7 +4,7 @@ import BottomIcons from "./BottomIcons";
 
 export default function MainNavigation() {
   return (
-    <div className="dark:bg-zinc-900 dark:text-white border-r-2  border-r-zinc-600/20 shadow-xl  transition-all duration-300 ease-in-out w-full lg:max-w-72 max-w-48 h-full flex flex-col justify-between">
+    <div className="  dark:bg-zinc-900 dark:text-white border-r-2  border-r-zinc-600/20 shadow-xl  transition-all duration-300 ease-in-out w-full lg:max-w-72 max-w-48 h-full flex flex-col justify-between">
       <div>
 
         <NavigationBar />

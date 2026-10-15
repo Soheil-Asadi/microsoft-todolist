@@ -21,6 +21,7 @@ export default function EditPanel() {
     toggleImportant,
     editTodoDescription,
   } = useContext(TodoContext);
+  
   const selectedTodo = todos.find((todo) => todo.id === selectedTodoId);
   const date = new Date(selectedTodo.createdAt).toString();
   const createdDate = date.split(" ").slice(0, 4).join(" ");

@@ -38,7 +38,7 @@ export default function NavigationBar() {
           className={({ isActive }) => (!isActive ? navClass : navClassActive)}
           to="/"
         >
-          <div className="    flex space-x-3 items-center">
+          <div className="flex space-x-3 items-center ">
             <svg
               width="20"
               height="20"

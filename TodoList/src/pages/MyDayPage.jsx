@@ -13,7 +13,7 @@ import SuggestionPanel from "../components/SuggestionPanel";
 export default function MyDayPage() {
   const todoCtx = useContext(TodoContext);
   const [sortMethod, setSortMethod] = useState("default");
-  const [suggestPanelOpen, setSuggestPanelOpen] = useState(true);
+  const [suggestPanelOpen, setSuggestPanelOpen] = useState(false);
 
   const myDayTasks = todoCtx.todos.filter(
     (todo) => todo.myDay && !todo.complete

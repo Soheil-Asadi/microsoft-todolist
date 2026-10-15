@@ -75,8 +75,8 @@ function todosReducer(state, action) {
 }
 
 export default function TodoContextProvider({ children }) {
+  
   const [todos, dispatch] = useReducer(todosReducer, []);
-
   const [selectedTodoId, setSelectedTodoId] = useState(null);
   const [searchedValue, setSearchedValue] = useState("");
 

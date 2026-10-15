@@ -1,14 +1,16 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 
 export const LayoutContext = createContext({
-  isMenuOpen: true,
+  isMenuOpen: false,
   toggleMenu: () => {},
   isList: true,
   setDisplayMode: () => {},
   isRightMenuOpen: false,
   setRightMenuOpen: () => {},
   generalSettings:{},
-  setGeneralSettings:()=>{}
+  setGeneralSettings:()=>{},
+  innerWidth,
+  
 });
 
 function layoutReducer(state, action) {
@@ -46,10 +48,11 @@ function layoutReducer(state, action) {
 
 function LayoutContextProvider({ children }) {
   const [uiState, dispatchUiState] = useReducer(layoutReducer, {
-    isMenuOpen: true,
+    isMenuOpen: false,
     isList: true,
     isRightMenuOpen: false,
   });
+  const[innerWidth,setInnerWidth]=useState(window.innerWidth)
   const[generalSettings,setGeneralSettings]=useState({
     confirmDeleting:true,
     newTasksTop:true,
@@ -79,12 +82,18 @@ function LayoutContextProvider({ children }) {
   function setRightMenuOpen(mode) {
     dispatchUiState({ type: "toggle_rightMenu", mode });
   }
+  
+
+
 
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 768) {
         dispatchUiState({ type: "close_menu" });
+        
       }
+      
+      setInnerWidth(window.innerWidth)
     }
 
     window.addEventListener("resize", handleResize);
@@ -93,6 +102,9 @@ function LayoutContextProvider({ children }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+
+
 
   const ctxValue = {
     isMenuOpen: uiState.isMenuOpen,
@@ -103,6 +115,7 @@ function LayoutContextProvider({ children }) {
     setRightMenuOpen,
     generalSettings,
     setGeneralSettings,
+    innerWidth
   };
   return (
     <LayoutContext.Provider value={ctxValue}>{children}</LayoutContext.Provider>

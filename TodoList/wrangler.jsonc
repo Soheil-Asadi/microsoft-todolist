@@ -1,0 +1,10 @@
+
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "todolist",
+    "compatibility_date": "2026-09-25",
+    "assets": {
+      "not_found_handling": "single-page-application"
+    }
+  }
+  

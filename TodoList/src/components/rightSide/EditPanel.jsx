@@ -49,11 +49,19 @@ export default function EditPanel() {
     setTodoOptionsChanges({});
   }, [selectedTodoId]);
 
+  function handleEditTodoText(id,value){
+    
+    if(!value){
+      return
+    }
+    editTodoDescription(id,value)
+  }
+
   return (
-    <div className="p-4 space-y-2 text-sm h-full justify-between flex flex-col dark:bg-zinc-900 dark:text-white ">
+    <div className="p-4 md:space-y-2 text-sm space-y-11 h-full rounded -mr-20 md:mr-0 bg-zinc-200 md:bg-[#FAF9F8] justify-between flex flex-col dark:bg-zinc-900 dark:text-white ">
       <div>
         <div className="  bg-white dark:bg-zinc-800">
-          <div className="flex items-center bg-blue-50 p-4  dark:bg-zinc-800 ">
+          <div className="flex items-center bg-blue-50 p-4  dark:bg-zinc-800 space-y-6 md:space-y-0  ">
             {selectedTodo.complete ? (
               <svg
                 className="cursor-pointer"
@@ -83,7 +91,8 @@ export default function EditPanel() {
                 ></path>
               </svg>
             )}
-            <input  onChange={(e)=>editTodoDescription(selectedTodo.id,e.target.value)}   value={selectedTodo.description} type="text" className=" outline-none flex flex-1 px-2  break-all ">
+            <input  onChange={(e)=>handleEditTodoText(selectedTodo.id,e.target.value)}   value={selectedTodo.description} type="text" className=" outline-none flex flex-1 px-2  break-all ">
+            {/* <input  onChange={(e)=>editTodoDescription(selectedTodo.id,e.target.value)}   value={selectedTodo.description} type="text" className=" outline-none flex flex-1 px-2  break-all "> */}
               
             </input>
             <div>

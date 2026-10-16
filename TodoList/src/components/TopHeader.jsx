@@ -20,10 +20,10 @@ export default function TopHeader({setSidePanel}) {
             <input onChange={(e)=>searchTodosHandler(e.target.value)} placeholder='search' className='dark:focus:placeholder:text-zinc-700 text-gray-900 max-w-md lg:w-md focus:placeholder:text-black dark:bg-zinc-800 dark:text-gray-400 placeholder:text-white  p-1 bg-white outline-0 rounded  md:not-focus:w-md not-focus:w-20 transition-all ease-in-out duration-500 '  type="search"/>
         </div>
         <div className='flex px-2 items-center h-full '>
-            <button onClick={()=>setSidePanel('Settings')} className={buttonClass}>setting</button>
+            <button onClick={()=>setSidePanel('Settings')} className={buttonClass}>Setting</button>
             <button onClick={()=>setSidePanel('Help')} className={buttonClass}>Help</button>
             <button onClick={()=>setSidePanel('What is new')} className={buttonClass}>News</button>
-            <button onClick={()=>setSidePanel('')} className={buttonClass}>PIC</button>
+            <button onClick={()=>setSidePanel('')} className={buttonClass}>Close</button>
         </div>
 
     </div>

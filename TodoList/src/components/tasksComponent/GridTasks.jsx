@@ -52,7 +52,7 @@ export default function GridTasks({
             </svg>
           </span>
 
-          <p onClick={handleOpenEditMenu} className={task.complete?'line-through pl-5 text-sm text-gray-500 w-full py-3 cursor-pointer dark:text-white  ': 'pl-5 text-sm text-gray-800 w-full  py-3 cursor-pointer dark:text-white '}>
+          <p onClick={handleOpenEditMenu} className={task.complete?'line-through pl-5 text-sm text-gray-500 w-full py-3 cursor-pointer dark:text-white   truncate  max-w-2xl  ': 'pl-5 text-sm text-gray-800 w-full  py-3 cursor-pointer dark:text-white   truncate  max-w-2xl'}>
             {task.description}
           </p>
         </div>

@@ -14,7 +14,9 @@ export default function MainNavigation() {
 
       <div className=" flex flex-col justify-between h-full mb-7">
 
-        <div>groups</div>
+        <div>
+          {/* groups */}
+          </div>
         <BottomIcons />
 
       </div>

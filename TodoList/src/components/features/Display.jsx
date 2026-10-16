@@ -46,8 +46,8 @@ export default function Display({tabName}) {
               </button>
         )}
       </div>
-      <p className="-ml-2 text-xl text-black dark:text-white font-semibold">{tabName}</p>
-      <div className="font-semibold">. . .</div>
+      <p className="-ml-2 text-xl text-black dark:text-white font-semibold whitespace-nowrap text-nowrap">{tabName}</p>
+      <div className="font-semibold whitespace-nowrap  text-nowrap cursor-pointer">. . .</div>
       <button
         className={`${!isList && 'border-b-gray-500 rounded-b-none'} dark:hover:bg-zinc-800 cursor-pointer flex space-x-2 items-center text-sm p-2 rounded   border-2 border-transparent focus: hover:bg-white `}
         onClick={() => handleDisplay("grid")}
